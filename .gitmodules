@@ -1,0 +1,3 @@
+[submodule "libzynayumi"]
+	path = libzynayumi
+	url = https://github.com/zynayumi/libzynayumi
