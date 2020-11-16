@@ -19,8 +19,8 @@
 
 START_NAMESPACE_DISTRHO
 
-PluginZynayumi::DistrhoPluginZynayumi()
-	: Plugin(paramCount, 0, 0) // 0 programs, 0 states
+PluginZynayumi::PluginZynayumi()
+	: Plugin(zynayumi::PARAMETERS_COUNT, 0, 0) // 0 programs, 0 states
 	, _parameters(_zynayumi)
 {
 	deactivate();
@@ -32,24 +32,26 @@ PluginZynayumi::~PluginZynayumi()
 
 void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 {
+	zynayumi::ParameterIndex pidx = (zynayumi::ParameterIndex)index;
 	// Initialize mandatory attributes
 	parameter.hints = kParameterIsAutomable;
-	if (_parameters.is_int(index) or _parameters.is_enum(index))
+	if (_parameters.is_int(pidx) or _parameters.is_enum(pidx))
 		parameter.hints |= kParameterIsInteger;
-	parameter.name = _parameters.get_name(index);
-	parameter.symbol = _parameters.get_symbol(index);
-	parameter.unit = _parameters.get_unit(index);
-	parameter.ranges.def = _parameters.float_value(index);
-	parameter.ranges.min = _parameters.lower(index);
-	parameter.ranges.max = _parameters.upper(index);
-	if (_parameters.is_enum(index)) {
-		parameter.enumValues.count = _parameters.enum_count(index);
+	// NEXT
+	parameter.name = _parameters.get_name(pidx).c_str();
+	parameter.symbol = _parameters.get_symbol(pidx).c_str();
+	parameter.unit = _parameters.get_unit(pidx).c_str();
+	parameter.ranges.def = _parameters.float_value(pidx);
+	parameter.ranges.min = _parameters.float_low(pidx);
+	parameter.ranges.max = _parameters.float_up(pidx);
+	if (_parameters.is_enum(pidx)) {
+		parameter.enumValues.count = _parameters.enum_count(pidx);
 		parameter.enumValues.restrictedMode = true;
 		ParameterEnumerationValue* const enumValues =
 			new ParameterEnumerationValue[parameter.enumValues.count];
 		for (size_t ei = 0; ei < parameter.enumValues.count; ei++) {				
 			enumValues[0].value = (float)ei / parameter.ranges.max;
-			enumValues[0].label = _parameters.enum_value_name(index, ei);
+			enumValues[0].label = _parameters.enum_value_name(pidx, ei).c_str();
 		}
 		parameter.enumValues.values = enumValues;
 	}
@@ -91,12 +93,12 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 
 float PluginZynayumi::getParameterValue(uint32_t index) const
 {
-	return _parameters.float_value(index);
+	return _parameters.float_value((zynayumi::ParameterIndex)index);
 }
 
 void PluginZynayumi::setParameterValue(uint32_t index, float value)
 {
-	_parameters.set_value(index, value);
+	_parameters.set_value((zynayumi::ParameterIndex)index, value);
 }
 
 void PluginZynayumi::activate()
@@ -112,7 +114,7 @@ void PluginZynayumi::run(const float**, float** outputs,
                          const MidiEvent* midiEvents,
                          uint32_t midiEventCount)
 {
-	int i, cue, block;
+	uint32_t i, cue, block;
 	
 	// Outputs buffers
 	float* p1 = outputs[0];
@@ -130,11 +132,11 @@ void PluginZynayumi::run(const float**, float** outputs,
 			p2 += block;
 		}
 		_zynayumi.raw_event_process(me.size, me.data);
-		cue = me.frames;
+		cue = me.frame;
 	}
 
 	// Process audio
-	zynayumi.audio_process(p1, p2, frames - cue);
+	_zynayumi.audio_process(p1, p2, frames - cue);
 }
 
 Plugin* createPlugin()
