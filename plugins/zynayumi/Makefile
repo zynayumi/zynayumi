@@ -23,7 +23,7 @@ include ../../dpf/Makefile.plugins.mk
 # --------------------------------------------------------------
 # Extra flags
 
-LINK_FLAGS += -lpthread
+LINK_FLAGS += -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi
 
 # --------------------------------------------------------------
 # Enable all possible plugin types
