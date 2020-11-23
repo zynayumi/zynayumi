@@ -28,9 +28,8 @@ Install
 
      sudo ./uninstall.sh
 
-   Otherwise, if you do have a GNU/Linux (or perhaps OSX?) system,
-   follow the remaining instructions below, you may need to modify
-   them a bit to suits your operating system.
+   Otherwise, follow the remaining instructions below, you may need to
+   modify them a bit to suits your operating system.
 
 2. Build libzynayumi::
 
