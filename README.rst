@@ -11,45 +11,39 @@ Requirements
 Install
 -------
 
-1. Clone the zynayumi repository and its submodules
+1. Clone the zynayumi repository and its submodules::
 
-   ```
-   $ get clone --recurse-submodules https://github.com/zynayumi/libzynayumi
-   ```
+     git clone --recurse-submodules https://github.com/zynayumi/zynayumi
 
    For the rest, if you're using a GNU/Linux system (or perhaps OSX?) you
-   can run the following script
+   can run the following script to build::
 
-   ```bash
-   $ ./install.sh
-   ```
+     ./build.sh
 
-   and likewise to uninstall
+   then to install::
+   
+     sudo ./install.sh
 
-   ```bash
-   $ ./uninstall.sh
-   ```
+   likewise if you wish to uninstall::
+
+     sudo ./uninstall.sh
 
    Otherwise, if you do have a GNU/Linux (or perhaps OSX?) system,
    follow the remaining instructions below, you may need to modify
    them a bit to suits your operating system.
 
-2. Build libzynayumi
+2. Build libzynayumi::
 
-   ```
-   $ cd libzynayumi
-   $ mkdir build
-   $ cd build
-   $ cmake ..
-   $ make -j
-   $ cd ../..
-   ```
+     cd libzynayumi
+     mkdir build
+     cd build
+     cmake ..
+     make -j
+     cd ../..
 
-3. Build zynayumi
+3. Build zynayumi::
 
-   ```
-   $ make -j
-   ```
+     make -j
 
-4. Copy the plugins and executable in the `bin` folder to the desired
-   destination.
+4. Copy the plugins and executable in the ``bin`` folder to the
+   desired destination.
