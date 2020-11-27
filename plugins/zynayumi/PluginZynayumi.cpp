@@ -37,7 +37,6 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 	parameter.hints = kParameterIsAutomable;
 	if (_parameters.is_int(pidx) or _parameters.is_enum(pidx))
 		parameter.hints |= kParameterIsInteger;
-	// NEXT
 	parameter.name = _parameters.get_name(pidx).c_str();
 	parameter.symbol = _parameters.get_symbol(pidx).c_str();
 	parameter.unit = _parameters.get_unit(pidx).c_str();
@@ -50,8 +49,8 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 		ParameterEnumerationValue* const enumValues =
 			new ParameterEnumerationValue[parameter.enumValues.count];
 		for (size_t ei = 0; ei < parameter.enumValues.count; ei++) {				
-			enumValues[0].value = (float)ei / parameter.ranges.max;
-			enumValues[0].label = _parameters.enum_value_name(pidx, ei).c_str();
+			enumValues[ei].value = (float)ei;
+			enumValues[ei].label = _parameters.enum_value_name(pidx, ei).c_str();
 		}
 		parameter.enumValues.values = enumValues;
 	}
