@@ -4,13 +4,16 @@
 
 set -x
 
+# Constants
+PREFIX="/usr/local"
+
 # Install
 cd bin
-cp zynayumi /usr/local/bin
-mkdir /usr/local/lib/lv2
-cp -r zynayumi.lv2 /usr/local/lib/lv2
-mkdir /usr/local/lib/dssi
-cp zynayumi-dssi.so /usr/local/lib/dssi
-mkdir /usr/local/lib/vst
-cp zynayumi-vst.so /usr/local/lib/vst
+cp zynayumi "${PREFIX}/bin"
+mkdir "${PREFIX}/lib/lv2"
+cp -r zynayumi.lv2 "${PREFIX}/lib/lv2"
+mkdir "${PREFIX}/lib/dssi"
+cp zynayumi-dssi.so "${PREFIX}/lib/dssi"
+mkdir "${PREFIX}/lib/vst"
+cp zynayumi-vst.so "${PREFIX}/lib/vst"
 cd ..

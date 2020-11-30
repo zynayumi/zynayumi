@@ -5,8 +5,11 @@
 
 set -x
 
+# Constants
+PREFIX="/usr/local"
+
 # Uninstall
-sudo rm /usr/local/bin/zynayumi
-sudo rm -r /usr/local/lib/lv2/zynayumi.lv2
-sudo rm /usr/local/lib/dssi/zynayumi-dssi.so
-sudo rm /usr/local/lib/vst/zynayumi-vst.so
+sudo rm "${PREFIX}/bin/zynayumi"
+sudo rm -r "${PREFIX}/lib/lv2/zynayumi.lv2"
+sudo rm "${PREFIX}/lib/dssi/zynayumi-dssi.so"
+sudo rm "${PREFIX}/lib/vst/zynayumi-vst.so"
