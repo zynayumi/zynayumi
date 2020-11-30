@@ -14,6 +14,7 @@ Install
 1. Clone the zynayumi repository and its submodules::
 
      git clone --recurse-submodules https://github.com/zynayumi/zynayumi
+     cd zynayumi
 
    For the rest, if you're using a GNU/Linux system (or perhaps OSX?) you
    can run the following script to build::
