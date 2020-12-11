@@ -16,18 +16,53 @@
  */
 
 #include "PluginZynayumi.hpp"
+#include "programs.hpp"
 
 START_NAMESPACE_DISTRHO
 
 PluginZynayumi::PluginZynayumi()
-	: Plugin(zynayumi::PARAMETERS_COUNT, 0, 0) // 0 programs, 0 states
+	: Plugin(zynayumi::PARAMETERS_COUNT, Programs::count, 0) // 0 states
 	, _parameters(_zynayumi)
 {
-	deactivate();
 }
 
 PluginZynayumi::~PluginZynayumi()
 {
+}
+
+const char* PluginZynayumi::getLabel() const
+{
+	return "Zynayumi";
+}
+
+const char* PluginZynayumi::getDescription() const
+{
+	return "Synth based on ayumi, a highly precise emulation of the YM2149.";
+}
+
+const char* PluginZynayumi::getMaker() const
+{
+	return "Nil Geisweiller";
+}
+
+const char* PluginZynayumi::getHomePage() const
+{
+	return "https://github.com/zynayumi/zynayumi";
+}
+
+const char* PluginZynayumi::getLicense() const
+{
+	return "GPL v3+";
+}
+
+uint32_t PluginZynayumi::getVersion() const
+{
+	return d_version(0, 9, 0);
+}
+
+int64_t PluginZynayumi::getUniqueId() const
+{
+	return d_cconst('Z', 'y', 'N', 'a');
 }
 
 void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
@@ -90,6 +125,11 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 	//        parameter.initDesignation(kParameterDesignationBypass);
 }
 
+void PluginZynayumi::initProgramName(uint32_t index, String& programName)
+{
+	programName = _program.program_names[index];
+}
+
 float PluginZynayumi::getParameterValue(uint32_t index) const
 {
 	return _parameters.float_value((zynayumi::ParameterIndex)index);
@@ -100,12 +140,10 @@ void PluginZynayumi::setParameterValue(uint32_t index, float value)
 	_parameters.set_value((zynayumi::ParameterIndex)index, value);
 }
 
-void PluginZynayumi::activate()
+void PluginZynayumi::loadProgram(uint32_t index)
 {
-}
-
-void PluginZynayumi::deactivate()
-{
+	// NEXT: what do to here?
+	_parameters = _programs.parameter_seq[index];
 }
 
 void PluginZynayumi::run(const float**, float** outputs,

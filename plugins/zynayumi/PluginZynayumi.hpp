@@ -21,6 +21,7 @@
 #include "DistrhoPlugin.hpp"
 #include "../../libzynayumi/src/zynayumi/zynayumi.hpp"
 #include "../../libzynayumi/src/zynayumi/parameters.hpp"
+#include "../../libzynayumi/src/zynayumi/programs.hpp"
 
 START_NAMESPACE_DISTRHO
 
@@ -33,54 +34,29 @@ public:
 
 protected:
 
-	const char* getLabel() const noexcept override
-	{
-		return "Zynayumi";
-	}
-
-	const char* getDescription() const override
-	{
-		return "Synth based on ayumi, a highly precise emulation of the YM2149.";
-	}
-
-	const char* getMaker() const noexcept override
-	{
-		return "Nil Geisweiller";
-	}
-
-	const char* getHomePage() const override
-	{
-		return "https://github.com/zynayumi/zynayumi";
-	}
-
-	const char* getLicense() const noexcept override
-	{
-		return "GPL v3+";
-	}
-
-	uint32_t getVersion() const noexcept override
-	{
-		return d_version(1, 0, 0);
-	}
-
-	int64_t getUniqueId() const noexcept override
-	{
-		return d_cconst('Z', 'y', 'N', 'a');
-	}
+	const char* getLabel() const noexcept override;
+	const char* getDescription() const override;
+	const char* getMaker() const noexcept override;
+	const char* getHomePage() const override;
+	const char* getLicense() const noexcept override;
+	uint32_t getVersion() const noexcept override;
+	int64_t getUniqueId() const noexcept override;
 
 	void initParameter(uint32_t index, Parameter& parameter) override;
+	void initProgramName(uint32_t index, String& programName) override;
 
 	float getParameterValue(uint32_t index) const override;
 	void  setParameterValue(uint32_t index, float value) override;
 
-	void activate() override;
-	void deactivate() override;
+	void loadProgram(uint32_t index) override;
+
 	void run(const float**, float** outputs, uint32_t frames, const MidiEvent* midiEvents, uint32_t midiEventCount) override;
 
 private:
 
 	zynayumi::Zynayumi _zynayumi;
 	zynayumi::Parameters _parameters;
+	zynayumi::Programs _programs;
 
 	DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(PluginZynayumi)
 };
