@@ -16,13 +16,14 @@
  */
 
 #include "PluginZynayumi.hpp"
-#include "programs.hpp"
+#include "../../libzynayumi/src/zynayumi/programs.hpp"
 
 START_NAMESPACE_DISTRHO
 
 PluginZynayumi::PluginZynayumi()
-	: Plugin(zynayumi::PARAMETERS_COUNT, Programs::count, 0) // 0 states
-	, _parameters(_zynayumi)
+	: Plugin(zynayumi::PARAMETERS_COUNT, zynayumi::Programs::count, 0) // 0 states
+	, _parameters(_zynayumi, _zynayumi.patch)
+	, _programs(_zynayumi)
 {
 }
 
@@ -30,7 +31,7 @@ PluginZynayumi::~PluginZynayumi()
 {
 }
 
-const char* PluginZynayumi::getLabel() const
+const char* PluginZynayumi::getLabel() const noexcept
 {
 	return "Zynayumi";
 }
@@ -40,7 +41,7 @@ const char* PluginZynayumi::getDescription() const
 	return "Synth based on ayumi, a highly precise emulation of the YM2149.";
 }
 
-const char* PluginZynayumi::getMaker() const
+const char* PluginZynayumi::getMaker() const noexcept
 {
 	return "Nil Geisweiller";
 }
@@ -50,17 +51,17 @@ const char* PluginZynayumi::getHomePage() const
 	return "https://github.com/zynayumi/zynayumi";
 }
 
-const char* PluginZynayumi::getLicense() const
+const char* PluginZynayumi::getLicense() const noexcept
 {
 	return "GPL v3+";
 }
 
-uint32_t PluginZynayumi::getVersion() const
+uint32_t PluginZynayumi::getVersion() const noexcept
 {
 	return d_version(0, 9, 0);
 }
 
-int64_t PluginZynayumi::getUniqueId() const
+int64_t PluginZynayumi::getUniqueId() const noexcept
 {
 	return d_cconst('Z', 'y', 'N', 'a');
 }
@@ -127,7 +128,7 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 
 void PluginZynayumi::initProgramName(uint32_t index, String& programName)
 {
-	programName = _program.program_names[index];
+	programName = _programs.parameters_pts[index]->patch.name.c_str();
 }
 
 float PluginZynayumi::getParameterValue(uint32_t index) const
@@ -142,8 +143,7 @@ void PluginZynayumi::setParameterValue(uint32_t index, float value)
 
 void PluginZynayumi::loadProgram(uint32_t index)
 {
-	// NEXT: what do to here?
-	_parameters = _programs.parameter_seq[index];
+	_parameters = *_programs.parameters_pts[index];
 }
 
 void PluginZynayumi::run(const float**, float** outputs,
