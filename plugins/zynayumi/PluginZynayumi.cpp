@@ -18,6 +18,8 @@
 #include "PluginZynayumi.hpp"
 #include "../../libzynayumi/src/zynayumi/programs.hpp"
 
+#include <iostream>
+
 START_NAMESPACE_DISTRHO
 
 PluginZynayumi::PluginZynayumi()
@@ -139,11 +141,15 @@ float PluginZynayumi::getParameterValue(uint32_t index) const
 void PluginZynayumi::setParameterValue(uint32_t index, float value)
 {
 	_parameters.set_value((zynayumi::ParameterIndex)index, value);
+	// Uncomment below to print current program and save it as preset
+	// std::cout << "Paste the following in Programs::Programs(Zynayumi& zynayumi):"
+	// 			 << std::endl << _parameters.to_string("\t") << std::endl;
 }
 
 void PluginZynayumi::loadProgram(uint32_t index)
 {
 	_parameters = *_programs.parameters_pts[index];
+	_parameters.update();
 }
 
 void PluginZynayumi::run(const float**, float** outputs,
