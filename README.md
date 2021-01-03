@@ -21,6 +21,7 @@ YM2149 http://sovietov.com/app/ayumi/ayumi.html.
 
 * [Monstrosity by A-Lin](https://lbry.tv/@ngeiswei:d/A-Lin---Monstrosity---2020-06-09:f)
 * [Hudros Chiphony by A-Lin](https://lbry.tv/@ngeiswei:d/hudros-chiphony_2020-09-02---normalized:1)
+* [Radiochiption by A-Lin](https://soundcloud.com/asublin/radiochiption)
 
 If you make a song with Zynayumi let me know so I can include it.
 
