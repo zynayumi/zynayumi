@@ -93,12 +93,12 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 		parameter.enumValues.values = enumValues;
 	}
 
+	// Initialize optional attributes
+	switch(index) {
 	// NEXT:
-	// // Initialize optional attributes
-	// switch(index) {
-	// case zynayumi::ENV_ATTACK_TIME:
-	// 	parameter.midiCC = XX;
-	// 	break;
+	case zynayumi::ENV_ATTACK_TIME:
+		parameter.midiCC = 73;
+		break;
 	// case zynayumi::ENV_DECAY_TIME:
 	// 	parameter.midiCC = XX;
 	// 	break;
@@ -120,9 +120,9 @@ void PluginZynayumi::initParameter(uint32_t index, Parameter& parameter)
 	// case zynayumi::PORTAMENTO_TIME:
 	// 	parameter.midiCC = XX;
 	// 	break;
-	// default:
-	// 	break;
-	// }
+	default:
+		break;
+	}
 	// NEXT:
 	//     case paramBypass:
 	//        parameter.initDesignation(kParameterDesignationBypass);
