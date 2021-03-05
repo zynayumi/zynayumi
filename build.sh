@@ -16,3 +16,6 @@ cd ../..
 # Build zynayumi
 rm -r build &> /dev/null
 make -j
+
+# Postprocess LV2 presets
+./floatify.sh
