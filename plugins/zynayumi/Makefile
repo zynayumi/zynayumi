@@ -15,6 +15,19 @@ NAME = zynayumi
 FILES_DSP = \
 	PluginZynayumi.cpp
 
+FILES_UI = \
+	UIZynayumi.cpp \
+	widgets/src/TextButton.cpp \
+	widgets/src/ScrollBar.cpp \
+	widgets/src/Knob.cpp \
+	widgets/src/DropDown.cpp \
+	widgets/src/Menu.cpp \
+	widgets/src/Slider.cpp \
+	widgets/src/HBox.cpp \
+	widgets/src/VBox.cpp \
+	widgets/src/PopUp.cpp \
+	widgets/src/CheckBox.cpp \
+	
 # --------------------------------------------------------------
 # Do some magic
 
@@ -24,6 +37,7 @@ include ../../dpf/Makefile.plugins.mk
 # Extra flags
 
 LINK_FLAGS += -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi
+BASE_FLAGS += -I. -I./widgets 
 
 # --------------------------------------------------------------
 # Enable all possible plugin types
