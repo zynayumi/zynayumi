@@ -1,0 +1,598 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+widget_class UserInterface {open selected
+  xywh {212 311 1000 440} type Double labelsize 12 size_range {0 0 1000 440} visible
+} {
+  Fl_Input_Choice {} {
+    label Emulator open
+    xywh {100 10 78 25}
+  } {}
+  Fl_Input_Choice {} {
+    label {Play Mode} open
+    xywh {260 10 78 25}
+  } {}
+  Fl_Group {} {
+    label Tone
+    xywh {28 45 410 55} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Check_Button {} {
+      label reset
+      xywh {115 64 70 15} down_box DOWN_BOX labelsize 12 align 4
+    }
+    Fl_Check_Button {} {
+      label {legacy tuning}
+      xywh {115 81 70 15} down_box DOWN_BOX labelsize 12 align 4
+    }
+    Fl_Dial {} {
+      label phase
+      xywh {147 50 32 32} labelsize 12
+    }
+    Fl_Dial {} {
+      label time
+      xywh {206 50 32 32} labelsize 12
+    }
+    Fl_Dial {} {
+      label detune
+      xywh {265 50 32 32} labelsize 12
+    }
+    Fl_Dial {} {
+      label transpose
+      xywh {324 50 32 32} labelsize 12
+    }
+    Fl_Dial {} {
+      label spread
+      xywh {383 50 34 32} labelsize 12
+    }
+  }
+  Fl_Group {} {
+    label Noise
+    xywh {460 22 200 78} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Dial {} {
+      label time
+      xywh {471 44 32 32} labelsize 12
+    }
+    Fl_Dial {} {
+      label period
+      xywh {515 44 32 32} labelsize 12
+    }
+    Fl_Group {} {
+      label Env
+      xywh {558 28 93 66} box THIN_DOWN_BOX labelsize 12 align 21
+    } {
+      Fl_Dial {} {
+        label attack
+        xywh {564 45 32 32} labelsize 12
+      }
+      Fl_Dial {} {
+        label time
+        xywh {609 45 32 32} labelsize 12
+      }
+    }
+  }
+  Fl_Group {} {
+    label Envelope
+    xywh {25 107 481 78} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Dial {} {
+      label Attack
+      xywh {39 129 32 32} labelsize 10
+    }
+    Fl_Slider {} {
+      label {hold 1 lvl}
+      xywh {100 129 14 32} labelsize 10 maximum 15 step 1
+    }
+    Fl_Dial {} {
+      label {inter1 tm}
+      xywh {143 129 32 32} labelsize 10
+    }
+    Fl_Slider {} {
+      label {hold 2 lvl}
+      xywh {204 129 14 32} labelsize 10 maximum 15 step 1
+    }
+    Fl_Dial {} {
+      label {inter2 tm}
+      xywh {248 129 32 32} labelsize 10
+    }
+    Fl_Slider {} {
+      label {hold 3 lvl}
+      xywh {309 129 14 32} labelsize 10 maximum 15 step 1
+    }
+    Fl_Dial {} {
+      label decay
+      xywh {352 129 32 32} labelsize 10
+    }
+    Fl_Slider {} {
+      label sustain
+      xywh {413 129 14 32} labelsize 10 maximum 15 step 1
+    }
+    Fl_Dial {} {
+      label release
+      xywh {457 129 32 32} labelsize 10
+    }
+  }
+  Fl_Group {} {
+    label {Pitch Envelope}
+    xywh {521 108 200 78} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Dial {} {
+      label {attack pitch}
+      xywh {549 130 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label time
+      xywh {603 130 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label smoothness
+      xywh {658 130 32 32} labelsize 10
+    }
+  }
+  Fl_Group {} {
+    label {Ring Modulator}
+    xywh {25 191 400 124} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Group {} {
+      label Waveform
+      xywh {33 212 124 78} box BORDER_BOX labelsize 10 align 17
+    } {
+      Fl_Slider {} {
+        label 1
+        xywh {33 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 2
+        xywh {48 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 3
+        xywh {63 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 4
+        xywh {79 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 5
+        xywh {94 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 6
+        xywh {110 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 7
+        xywh {125 233 10 32} labelsize 10
+      }
+      Fl_Slider {} {
+        label 8
+        xywh {141 233 10 32} labelsize 10
+      }
+    }
+    Fl_Check_Button {} {
+      label reset
+      xywh {224 213 20 20} down_box DOWN_BOX labelsize 10 align 4
+    }
+    Fl_Check_Button {} {
+      label sync
+      xywh {224 233 20 20} down_box DOWN_BOX labelsize 10 align 4
+    }
+    Fl_Input_Choice {} {
+      label loop open
+      xywh {189 263 55 16} labelsize 10 textsize 10
+    } {}
+    Fl_Dial {} {
+      label phase
+      xywh {264 204 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label detune
+      xywh {315 204 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label {fixed pitch}
+      xywh {368 204 32 32} labelsize 10
+    }
+    Fl_Group {} {open
+      xywh {262 262 86 31} box THIN_DOWN_BOX
+    } {
+      Fl_Slider {} {
+        label {fixed/relative}
+        xywh {276 268 59 10} type Horizontal labeltype NO_LABEL
+      }
+      Fl_Box {} {
+        label fixed
+        xywh {262 281 33 7} labelsize 8
+      }
+      Fl_Box {} {
+        label relative
+        xywh {312 281 35 7} labelsize 8
+      }
+    }
+    Fl_Dial {} {
+      label depth
+      xywh {366 256 32 32} labelsize 10
+    }
+  }
+  Fl_Group {} {
+    label Buzzer
+    xywh {430 191 108 64} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Input_Choice {} {
+      label shape open
+      xywh {468 230 55 16} labelsize 10 textsize 10
+    } {}
+    Fl_Check_Button {} {
+      label enabled
+      xywh {478 211 55 20} down_box DOWN_BOX labelsize 10 align 4
+    }
+  }
+  Fl_Group {} {
+    label Sequencer
+    xywh {817 15 157 370} box BORDER_BOX labelsize 12 align 17
+  } {
+    Fl_Group {} {
+      label TP
+      xywh {840 43 26 337} labelsize 9
+    } {
+      Fl_Spinner {} {
+        label {1:}
+        xywh {840 43 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {2:}
+        xywh {840 64 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {3:}
+        xywh {840 85 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {4:}
+        xywh {840 106 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {5:}
+        xywh {840 128 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {6:}
+        xywh {840 149 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {7:}
+        xywh {840 170 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {8:}
+        xywh {840 191 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {9:}
+        xywh {840 213 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {10:}
+        xywh {840 234 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {11:}
+        xywh {840 255 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {12:}
+        xywh {840 276 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {13:}
+        xywh {840 298 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {14:}
+        xywh {840 319 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {15:}
+        xywh {840 340 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {16:}
+        xywh {840 362 26 18} labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+    }
+    Fl_Group {} {
+      label NP
+      xywh {874 43 26 337} labelsize 8
+    } {
+      Fl_Spinner {} {
+        label n1
+        xywh {874 43 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {2:}
+        xywh {874 64 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {3:}
+        xywh {874 85 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {4:}
+        xywh {874 106 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {5:}
+        xywh {874 128 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {6:}
+        xywh {874 149 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {7:}
+        xywh {874 170 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {8:}
+        xywh {874 191 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {9:}
+        xywh {874 213 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {10:}
+        xywh {874 234 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {11:}
+        xywh {874 255 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {12:}
+        xywh {874 276 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {13:}
+        xywh {874 298 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {14:}
+        xywh {874 319 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {15:}
+        xywh {874 340 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {16:}
+        xywh {874 362 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+    }
+    Fl_Group {} {
+      label RM
+      xywh {908 43 26 337} labelsize 8
+    } {
+      Fl_Spinner {} {
+        label n1
+        xywh {908 43 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {2:}
+        xywh {908 64 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {3:}
+        xywh {908 85 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {4:}
+        xywh {908 106 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {5:}
+        xywh {908 128 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {6:}
+        xywh {908 149 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {7:}
+        xywh {908 170 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {8:}
+        xywh {908 191 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {9:}
+        xywh {908 213 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {10:}
+        xywh {908 234 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {11:}
+        xywh {908 255 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {12:}
+        xywh {908 276 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {13:}
+        xywh {908 298 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {14:}
+        xywh {908 319 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {15:}
+        xywh {908 340 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {16:}
+        xywh {908 362 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+    }
+    Fl_Group {} {
+      label LV
+      xywh {942 43 26 337} labelsize 8
+    } {
+      Fl_Spinner {} {
+        label n1
+        xywh {942 43 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {2:}
+        xywh {942 64 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {3:}
+        xywh {942 85 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {4:}
+        xywh {942 106 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {5:}
+        xywh {942 128 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {6:}
+        xywh {942 149 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {7:}
+        xywh {942 170 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {8:}
+        xywh {942 191 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {9:}
+        xywh {942 213 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {10:}
+        xywh {942 234 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {11:}
+        xywh {942 255 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {12:}
+        xywh {942 276 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {13:}
+        xywh {942 298 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {14:}
+        xywh {942 319 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {15:}
+        xywh {942 340 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+      Fl_Spinner {} {
+        label {16:}
+        xywh {942 362 26 18} labeltype NO_LABEL labelsize 9 minimum -48 maximum 48 value 0 textsize 9
+      }
+    }
+  }
+  Fl_Group {} {
+    label LFO
+    xywh {545 192 160 78} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Input_Choice {} {
+      label shape open
+      xywh {615 197 55 16} labelsize 10 textsize 10
+    } {}
+    Fl_Dial {} {
+      label freq
+      xywh {551 220 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label delay
+      xywh {605 220 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label depth
+      xywh {660 220 32 32} labelsize 10
+    }
+  }
+  Fl_Group {} {
+    label Portamento open
+    xywh {550 276 110 64} box BORDER_BOX labelsize 10 align 21
+  } {
+    Fl_Dial {} {
+      label time
+      xywh {555 291 32 32} labelsize 10
+    }
+    Fl_Dial {} {
+      label smoothness
+      xywh {609 291 32 32} labelsize 10
+    }
+  }
+  Fl_Group {} {
+    label Global open
+    xywh {30 325 431 100} box BORDER_BOX labelsize 12 align 21
+  } {
+    Fl_Slider {} {
+      label gain
+      xywh {45 343 14 65} labelsize 10 maximum 15 step 1
+    }
+    Fl_Group {} {
+      label Panning
+      xywh {90 341 100 52} box BORDER_BOX labelsize 10 align 21
+    } {
+      Fl_Slider {} {
+        label {voice 1}
+        xywh {127 354 59 10} type Horizontal labelsize 8 align 4 value 0.5
+      }
+      Fl_Slider {} {
+        label {voice 2}
+        xywh {127 366 59 10} type Horizontal labelsize 8 align 4 value 0.5
+      }
+      Fl_Slider {} {
+        label {voice 3}
+        xywh {127 378 59 10} type Horizontal labelsize 8 align 4 value 0.5
+      }
+    }
+    Fl_Spinner {} {
+      label {Pitch wheel}
+      xywh {151 400 26 18} labelsize 9 maximum 12 textsize 9
+    }
+    Fl_Group {} {
+      label Sensitivity open
+      xywh {200 340 255 70} box THIN_DOWN_BOX labelsize 11 align 21
+    } {
+      Fl_Dial {} {
+        label velocity
+        xywh {215 358 32 32} labelsize 12
+      }
+      Fl_Dial {} {
+        label ringmod
+        xywh {281 358 32 32} labelsize 12
+      }
+      Fl_Dial {} {
+        label {noise period}
+        xywh {348 358 32 32} labelsize 12
+      }
+      Fl_Dial {} {
+        label pitch
+        xywh {415 358 32 32} labelsize 12
+      }
+    }
+  }
+}

@@ -1,19 +1,4 @@
 /*
-    Drops - Drops Really Only Plays Samples
-    Copyright (C) 2021  Rob van den Berg
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 #include "Knob.hpp"
 
@@ -22,7 +7,6 @@ START_NAMESPACE_DISTRHO
 Knob::Knob(Window &parent) noexcept
     : NanoWidget(parent)
 {
-    loadSharedResources();
     parent.addIdleCallback(this);
     dragging_ = false;
     has_mouse_ = false;
@@ -34,16 +18,8 @@ Knob::Knob(Window &parent) noexcept
     real_max = 1.0f;
     using_log = false;
     is_centered = false;
-    labelSize = 14.0f;
-    label = "label";
     margin = 4.0f;
     gauge_width = 8.0f;
-    fontFace(NANOVG_DEJAVU_SANS_TTF);
-    font_ = findFont(NANOVG_DEJAVU_SANS_TTF);
-    if (font_ == -1)
-    {
-        fprintf(stderr, "%s", "font not found\n");
-    }
     foreground_color = Color(1, 1, 1);
     background_color = Color(0, 0, 0);
     text_color = Color(1, 1, 1);
@@ -54,12 +30,13 @@ Knob::Knob(Window &parent) noexcept
     countdown_ = 30;
     step_value = 0.f;
     setParamOnMove = true;
+    callback = nullptr;
 }
 
 Knob::Knob(Widget *parent) noexcept
     : NanoWidget(parent)
 {
-    loadSharedResources();
+    //loadSharedResources();
     parent->getParentWindow().addIdleCallback(this);
     dragging_ = false;
     has_mouse_ = false;
@@ -71,16 +48,8 @@ Knob::Knob(Widget *parent) noexcept
     real_max = 1.0f;
     using_log = false;
     is_centered = false;
-    labelSize = 14.0f;
-    label = "label";
     margin = 4.0f;
     gauge_width = 8.0f;
-    fontFace(NANOVG_DEJAVU_SANS_TTF);
-    font_ = findFont(NANOVG_DEJAVU_SANS_TTF);
-    if (font_ == -1)
-    {
-        fprintf(stderr, "%s", "font not found\n");
-    }
     foreground_color = Color(1, 1, 1);
     background_color = Color(0, 0, 0);
     text_color = Color(1, 1, 1);
@@ -91,6 +60,7 @@ Knob::Knob(Widget *parent) noexcept
     countdown_ = 30;
     step_value = 0.f;
     setParamOnMove = true;
+    callback = nullptr;
 }
 
 float Knob::getValue() noexcept
@@ -197,7 +167,8 @@ bool Knob::onScroll(const ScrollEvent &ev)
     float normValue = (value_ - min) / (max - min);
     if (d_isZero(step_value))
     {
-        callback->knobDragFinished(this, normValue);
+        if (callback)
+            callback->knobDragFinished(this, normValue);
     }
     else
     {
@@ -232,7 +203,7 @@ bool Knob::onMotion(const MotionEvent &ev)
                 popUp->hide();
         }
     }
-    repaint();
+   // repaint();
 
     if (!dragging_)
     {
@@ -295,82 +266,93 @@ void Knob::onNanoDisplay()
 {
     const float height = getHeight();
     const float width = getWidth();
+    // beginPath();
+    // fillColor(128, 128, 128);
+    // rect(0, 0, width, height);
+    // fill();
+    // closePath();
 
     float normValue = (((using_log ? _invlogscale(value_) : value_) - min) / (max - min));
     if (normValue < 0.0f)
         normValue = 0.0f;
 
-    // measure string
-    fontFaceId(font_);
-    fontSize(labelSize);
-    Rectangle<float> bounds;
-    textBounds(0.f, 0.f, label.c_str(), NULL, bounds);
-    const float label_height = bounds.getHeight();
-    // label
-    const float label_x = width * .5f; //- label_width / 2.0f;
-    const float label_y = height - label_height;
-    const float radius = (height - label_height - margin) / 2.0f;
-    const float center_x = (width * .5f);
-    const float center_y = radius + margin;
+    const float radius = (height - margin) * .5f;
+    const float center_x = width * .5f;
+    const float center_y = radius + margin * .5f;
+
+    // circle
     beginPath();
-    fillColor(text_color);
-    textAlign(ALIGN_CENTER | ALIGN_TOP);
-    text(label_x, label_y, label.c_str(), NULL);
+    fillColor(background_color);
+    circle(center_x, center_y, radius);
+    fill();
     closePath();
-    //Gauge (empty)
+
+    // arc
     beginPath();
-    strokeWidth(gauge_width);
-    strokeColor(background_color);
-    arc(center_x, center_y, radius - gauge_width / 2, 0.75f * M_PI, 0.25f * M_PI, NanoVG::Winding::CW);
+    strokeColor(foreground_color);
+    strokeWidth(margin);
+    arc(center_x, center_y, radius, 0.75f * M_PI, 0.25f * M_PI, NanoVG::Winding::CW);
     stroke();
     closePath();
-    //Gauge (value)
+
+    // handle
+    auto handleRadius = radius * .6f;
+    auto handleWidth = 2.5f;
+    auto radians = (0.75f + 1.5f * normValue) * M_PI;
+    auto xHandle = handleRadius * cos(radians) + center_x;
+    auto yHandle = handleRadius * sin(radians) + center_y;
     beginPath();
-    strokeWidth(gauge_width);
-    if (has_mouse_)
-    {
-        fill_color_ = highlight_color;
-    }
-    else
-    {
-        fill_color_ = foreground_color;
-    }
-    strokeColor(fill_color_);
-    if (is_centered)
-    {
-        //   const float stop_angle = normValue > 0.5f ? (0.75 + 1.5f * normValue) * M_PI : (0.75f + normValue) * M_PI;
-        const NanoVG::Winding w = normValue > 0.5f ? NanoVG::Winding::CW : NanoVG::Winding::CCW;
-        arc(center_x,
-            center_y,
-            radius - gauge_width / 2,
-            1.5f * M_PI,
-            (0.75f + 1.5f * normValue) * M_PI,
-            w);
-    }
-    else
-    {
-        arc(center_x,
-            center_y,
-            radius - gauge_width / 2,
-            0.75f * M_PI,
-            (0.75f + 1.5f * normValue) * M_PI,
-            NanoVG::Winding::CW);
-    }
-    stroke();
+    circle(xHandle, yHandle, handleWidth);
+    fillColor(foreground_color);
+    fill();
     closePath();
+    // beginPath();
+    // strokeWidth(gauge_width);
+    // if (has_mouse_)
+    // {
+    //     fill_color_ = highlight_color;
+    // }
+    // else
+    // {
+    //     fill_color_ = foreground_color;
+    // }
+    // strokeColor(fill_color_);
+    // if (is_centered)
+    // {
+    //     //   const float stop_angle = normValue > 0.5f ? (0.75 + 1.5f * normValue) * M_PI : (0.75f + normValue) * M_PI;
+    //     const NanoVG::Winding w = normValue > 0.5f ? NanoVG::Winding::CW : NanoVG::Winding::CCW;
+    //     arc(center_x,
+    //         center_y,
+    //         radius - gauge_width / 2,
+    //         1.5f * M_PI,
+    //         (0.75f + 1.5f * normValue) * M_PI,
+    //         w);
+    // }
+    // else
+    // {
+    // arc(center_x,
+    //     center_y,
+    //     radius - gauge_width / 2,
+    //     0.75f * M_PI,
+    //     (0.75f + 1.5f * normValue) * M_PI,
+    //     NanoVG::Winding::CW);
+    // }
+    // stroke();
+    // closePath();
     // if centered draw tickmark at top
-    if (is_centered)
-    {
-        beginPath();
-        arc(center_x, center_y,
-            radius - gauge_width / 2,
-            1.48f * M_PI,
-            1.52f * M_PI,
-            NanoVG::Winding::CW);
-        stroke();
-        closePath();
-    }
+    // if (is_centered)
+    // {
+    //     beginPath();
+    //     arc(center_x, center_y,
+    //         radius - gauge_width / 2,
+    //         1.48f * M_PI,
+    //         1.52f * M_PI,
+    //         NanoVG::Winding::CW);
+    //     stroke();
+    //     closePath();
+    // }
 }
+
 void Knob::setValue(float val, bool sendCallback) noexcept
 {
     if (d_isEqual(value_, val))
@@ -453,5 +435,12 @@ void Knob::setStepText(std::initializer_list<const char *> strings)
     stepText.clear();
     stepText.insert(stepText.end(), strings.begin(), strings.end());
 }
+
+// void Knob::setFont(const char *name)
+// {
+//     font_id = findFont("RobotoCondensed");
+
+//     printf("font_id=%i\n", font_id);
+// }
 
 END_NAMESPACE_DISTRHO

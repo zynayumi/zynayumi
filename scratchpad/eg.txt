@@ -1,0 +1,12 @@
+# start
+0, 0.0
+# attack time, L1
+60.0, 300.0
+# time1 , L2
+120.0, 216.0
+# time2, L3
+180.0, 180.0
+# decay, SUS
+240.0, 210.0
+# release time, 
+300.0, 0.0

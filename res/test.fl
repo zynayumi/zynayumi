@@ -1,0 +1,7 @@
+ # data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+widget_class UserInterface {open selected
+  xywh {25 76 100 100} type Double visible
+} {}

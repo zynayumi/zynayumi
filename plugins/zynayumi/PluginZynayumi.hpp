@@ -22,41 +22,46 @@
 #include "../../libzynayumi/src/zynayumi/zynayumi.hpp"
 #include "../../libzynayumi/src/zynayumi/parameters.hpp"
 #include "../../libzynayumi/src/zynayumi/programs.hpp"
+#include <memory>
 
 START_NAMESPACE_DISTRHO
 
 class PluginZynayumi : public Plugin
 {
 public:
-
 	PluginZynayumi();
 	~PluginZynayumi() override;
 
 protected:
-
-	const char* getLabel() const noexcept override;
-	const char* getDescription() const override;
-	const char* getMaker() const noexcept override;
-	const char* getHomePage() const override;
-	const char* getLicense() const noexcept override;
+	const char *getLabel() const noexcept override;
+	const char *getDescription() const override;
+	const char *getMaker() const noexcept override;
+	const char *getHomePage() const override;
+	const char *getLicense() const noexcept override;
 	uint32_t getVersion() const noexcept override;
 	int64_t getUniqueId() const noexcept override;
 
-	void initParameter(uint32_t index, Parameter& parameter) override;
-	void initProgramName(uint32_t index, String& programName) override;
+	void initParameter(uint32_t index, Parameter &parameter) override;
+	void initProgramName(uint32_t index, String &programName) override;
 
 	float getParameterValue(uint32_t index) const override;
-	void  setParameterValue(uint32_t index, float value) override;
+	void setParameterValue(uint32_t index, float value) override;
 
 	void loadProgram(uint32_t index) override;
 
-	void run(const float**, float** outputs, uint32_t frames, const MidiEvent* midiEvents, uint32_t midiEventCount) override;
+	void run(const float **, float **outputs, uint32_t frames, const MidiEvent *midiEvents, uint32_t midiEventCount) override;
 
 private:
+	void peak_follower(const float &in,float&out,const float &scalar);
 
 	zynayumi::Zynayumi _zynayumi;
 	zynayumi::Parameters _parameters;
 	zynayumi::Programs _programs;
+	float _output_left, _output_right;
+	float _scalar;
+#ifndef VERY_SMALL_FLOAT
+#define VERY_SMALL_FLOAT 1.0e-30F
+#endif
 
 	DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(PluginZynayumi)
 };
@@ -65,4 +70,4 @@ private:
 
 END_NAMESPACE_DISTRHO
 
-#endif  // PLUGIN_ZYNAYUMI_HPP
+#endif // PLUGIN_ZYNAYUMI_HPP

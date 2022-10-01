@@ -1,0 +1,231 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/rob/git/zynayumi'
+ 
+make -C dpf/dgl
+ 
+make[1]: Entering directory '/home/rob/git/zynayumi/dpf/dgl'
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Application.cpp"
+g++ src/Application.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -c -o ../build/dgl/Application.cpp.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Color.cpp"
+g++ src/Color.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -c -o ../build/dgl/Color.cpp.o
+mkdir -p ../build/dgl
+echo "Compiling src/Geometry.cpp"
+g++ src/Geometry.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -c -o ../build/dgl/Geometry.cpp.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/ImageBase.cpp"
+g++ src/ImageBase.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -c -o ../build/dgl/ImageBase.cpp.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Resources.cpp"
+g++ src/Resources.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -c -o ../build/dgl/Resources.cpp.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Widget.cpp"
+g++ src/Widget.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -c -o ../build/dgl/Widget.cpp.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Cairo.cpp (Cairo variant)"
+g++ src/Cairo.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -pthread -I/usr/local/include -I/usr/local/include/glib-2.0 -I/usr/local/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DDGL_CAIRO -c -o ../build/dgl/Cairo.cpp.cairo.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/WidgetPrivateData.cpp (Cairo variant)"
+g++ src/WidgetPrivateData.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -pthread -I/usr/local/include -I/usr/local/include/glib-2.0 -I/usr/local/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DDGL_CAIRO -c -o ../build/dgl/WidgetPrivateData.cpp.cairo.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Window.cpp (Cairo variant)"
+g++ src/Window.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter -pthread -I/usr/local/include -I/usr/local/include/glib-2.0 -I/usr/local/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DDGL_CAIRO -c -o ../build/dgl/Window.cpp.cairo.o
+mkdir -p ../build
+echo "Creating libdgl-cairo.a"
+rm -f ../build/libdgl-cairo.a
+ar crs ../build/libdgl-cairo.a ../build/dgl/Application.cpp.o ../build/dgl/Color.cpp.o ../build/dgl/Geometry.cpp.o ../build/dgl/ImageBase.cpp.o ../build/dgl/Resources.cpp.o ../build/dgl/Widget.cpp.o ../build/dgl/Cairo.cpp.cairo.o ../build/dgl/WidgetPrivateData.cpp.cairo.o ../build/dgl/Window.cpp.cairo.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/OpenGL.cpp (OpenGL variant)"
+g++ src/OpenGL.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter  -DDGL_OPENGL -c -o ../build/dgl/OpenGL.cpp.opengl.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Image.cpp (OpenGL variant)"
+g++ src/Image.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter  -DDGL_OPENGL -c -o ../build/dgl/Image.cpp.opengl.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/ImageWidgets.cpp (OpenGL variant)"
+g++ src/ImageWidgets.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter  -DDGL_OPENGL -c -o ../build/dgl/ImageWidgets.cpp.opengl.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/NanoVG.cpp (OpenGL variant)"
+g++ src/NanoVG.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter  -DDGL_OPENGL -c -o ../build/dgl/NanoVG.cpp.opengl.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/WidgetPrivateData.cpp (OpenGL variant)"
+g++ src/WidgetPrivateData.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter  -DDGL_OPENGL -c -o ../build/dgl/WidgetPrivateData.cpp.opengl.o
+ 
+mkdir -p ../build/dgl
+echo "Compiling src/Window.cpp (OpenGL variant)"
+g++ src/Window.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -std=gnu++0x -fvisibility-inlines-hidden  -DHAVE_CAIRO -DHAVE_OPENGL -I. -Isrc -DDONT_SET_USING_DGL_NAMESPACE -Wno-unused-parameter  -DDGL_OPENGL -c -o ../build/dgl/Window.cpp.opengl.o
+mkdir -p ../build
+echo "Creating libdgl-opengl.a"
+rm -f ../build/libdgl-opengl.a
+ar crs ../build/libdgl-opengl.a ../build/dgl/Application.cpp.o ../build/dgl/Color.cpp.o ../build/dgl/Geometry.cpp.o ../build/dgl/ImageBase.cpp.o ../build/dgl/Resources.cpp.o ../build/dgl/Widget.cpp.o ../build/dgl/OpenGL.cpp.opengl.o ../build/dgl/Image.cpp.opengl.o ../build/dgl/ImageWidgets.cpp.opengl.o ../build/dgl/NanoVG.cpp.opengl.o ../build/dgl/WidgetPrivateData.cpp.opengl.o ../build/dgl/Window.cpp.opengl.o
+ 
+echo "Symlinking libdgl.a"
+ln -sf ../build/libdgl-opengl.a ../build/libdgl.a
+make[1]: Leaving directory '/home/rob/git/zynayumi/dpf/dgl'
+make all -C plugins/zynayumi
+ 
+make[1]: Entering directory '/home/rob/git/zynayumi/plugins/zynayumi'
+ 
+mkdir -p "../../build/zynayumi"
+echo "Compiling PluginZynayumi.cpp"
+g++ PluginZynayumi.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/PluginZynayumi.cpp.o
+ 
+mkdir -p "../../build/zynayumi"
+echo "Compiling UIZynayumi.cpp"
+g++ UIZynayumi.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/UIZynayumi.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/TextButton.cpp"
+g++ widgets/src/TextButton.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/TextButton.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/ScrollBar.cpp"
+g++ widgets/src/ScrollBar.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/ScrollBar.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Knob.cpp"
+g++ widgets/src/Knob.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Knob.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/DropDown.cpp"
+g++ widgets/src/DropDown.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/DropDown.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Menu.cpp"
+g++ widgets/src/Menu.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Menu.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Slider.cpp"
+g++ widgets/src/Slider.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Slider.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/HBox.cpp"
+g++ widgets/src/HBox.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/HBox.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/VBox.cpp"
+g++ widgets/src/VBox.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/VBox.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/PopUp.cpp"
+g++ widgets/src/PopUp.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/PopUp.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/CheckBox.cpp"
+g++ widgets/src/CheckBox.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/CheckBox.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Panner.cpp"
+g++ widgets/src/Panner.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Panner.cpp.o
+ 
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Spinner.cpp"
+g++ widgets/src/Spinner.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Spinner.cpp.o
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/EG.cpp"
+g++ widgets/src/EG.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/EG.cpp.o
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Waveform.cpp"
+g++ widgets/src/Waveform.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Waveform.cpp.o
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/Switch.cpp"
+g++ widgets/src/Switch.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/Switch.cpp.o
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/TextSpinner.cpp"
+g++ widgets/src/TextSpinner.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/TextSpinner.cpp.o
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/SeqSpinner.cpp"
+g++ widgets/src/SeqSpinner.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/SeqSpinner.cpp.o
+mkdir -p "../../build/zynayumi/widgets/src"
+echo "Compiling widgets/src/SeqSlider.cpp"
+g++ widgets/src/SeqSlider.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/widgets/src/SeqSlider.cpp.o
+mkdir -p "../../build/zynayumi"
+echo "Compiling SVGImage.cpp"
+g++ SVGImage.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/SVGImage.cpp.o
+mkdir -p "../../build/zynayumi"
+echo "Compiling Artwork.cpp"
+g++ Artwork.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/Artwork.cpp.o
+mkdir -p "../../build/zynayumi"
+echo "Compiling Fonts.cpp"
+g++ Fonts.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -c -o ../../build/zynayumi/Fonts.cpp.o
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoPluginMain.cpp (JACK)"
+g++ ../../dpf/distrho/DistrhoPluginMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl  -DDISTRHO_PLUGIN_TARGET_JACK -c -o ../../build/zynayumi/DistrhoPluginMain_JACK.cpp.o
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoUIMain.cpp (JACK)"
+g++ ../../dpf/distrho/DistrhoUIMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -DDISTRHO_PLUGIN_TARGET_JACK -c -o ../../build/zynayumi/DistrhoUIMain_JACK.cpp.o
+ 
+mkdir -p ../../bin
+echo "Creating JACK standalone for zynayumi"
+g++ ../../build/zynayumi/PluginZynayumi.cpp.o ../../build/zynayumi/UIZynayumi.cpp.o ../../build/zynayumi/widgets/src/TextButton.cpp.o ../../build/zynayumi/widgets/src/ScrollBar.cpp.o ../../build/zynayumi/widgets/src/Knob.cpp.o ../../build/zynayumi/widgets/src/DropDown.cpp.o ../../build/zynayumi/widgets/src/Menu.cpp.o ../../build/zynayumi/widgets/src/Slider.cpp.o ../../build/zynayumi/widgets/src/HBox.cpp.o ../../build/zynayumi/widgets/src/VBox.cpp.o ../../build/zynayumi/widgets/src/PopUp.cpp.o ../../build/zynayumi/widgets/src/CheckBox.cpp.o ../../build/zynayumi/widgets/src/Panner.cpp.o ../../build/zynayumi/widgets/src/Spinner.cpp.o ../../build/zynayumi/widgets/src/EG.cpp.o ../../build/zynayumi/widgets/src/Waveform.cpp.o ../../build/zynayumi/widgets/src/Switch.cpp.o ../../build/zynayumi/widgets/src/TextSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSlider.cpp.o ../../build/zynayumi/SVGImage.cpp.o ../../build/zynayumi/Artwork.cpp.o ../../build/zynayumi/Fonts.cpp.o ../../build/zynayumi/DistrhoPluginMain_JACK.cpp.o ../../build/zynayumi/DistrhoUIMain_JACK.cpp.o ../../dpf/build/libdgl-opengl.a -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -fdata-sections -ffunction-sections -Wl,--gc-sections -Wl,-O1 -Wl,--as-needed -Wl,--strip-all  -Wl,--no-undefined -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi -lfmt  -lGL -lX11 -lX11 -lm -ljack -o ../../bin/zynayumi
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoPluginMain.cpp (DSSI)"
+g++ ../../dpf/distrho/DistrhoPluginMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -DDISTRHO_PLUGIN_TARGET_DSSI -c -o ../../build/zynayumi/DistrhoPluginMain_DSSI.cpp.o
+ 
+mkdir -p ../../bin
+echo "Creating DSSI plugin library for zynayumi"
+g++ ../../build/zynayumi/PluginZynayumi.cpp.o ../../build/zynayumi/DistrhoPluginMain_DSSI.cpp.o -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -fdata-sections -ffunction-sections -Wl,--gc-sections -Wl,-O1 -Wl,--as-needed -Wl,--strip-all  -Wl,--no-undefined -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi -lfmt  -shared -o ../../bin/zynayumi-dssi.so
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoUIMain.cpp (DSSI)"
+g++ ../../dpf/distrho/DistrhoUIMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl  -DDISTRHO_PLUGIN_TARGET_DSSI -c -o ../../build/zynayumi/DistrhoUIMain_DSSI.cpp.o
+ 
+mkdir -p ../../bin/zynayumi-dssi
+echo "Creating DSSI UI for zynayumi"
+g++ ../../build/zynayumi/UIZynayumi.cpp.o ../../build/zynayumi/widgets/src/TextButton.cpp.o ../../build/zynayumi/widgets/src/ScrollBar.cpp.o ../../build/zynayumi/widgets/src/Knob.cpp.o ../../build/zynayumi/widgets/src/DropDown.cpp.o ../../build/zynayumi/widgets/src/Menu.cpp.o ../../build/zynayumi/widgets/src/Slider.cpp.o ../../build/zynayumi/widgets/src/HBox.cpp.o ../../build/zynayumi/widgets/src/VBox.cpp.o ../../build/zynayumi/widgets/src/PopUp.cpp.o ../../build/zynayumi/widgets/src/CheckBox.cpp.o ../../build/zynayumi/widgets/src/Panner.cpp.o ../../build/zynayumi/widgets/src/Spinner.cpp.o ../../build/zynayumi/widgets/src/EG.cpp.o ../../build/zynayumi/widgets/src/Waveform.cpp.o ../../build/zynayumi/widgets/src/Switch.cpp.o ../../build/zynayumi/widgets/src/TextSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSlider.cpp.o ../../build/zynayumi/SVGImage.cpp.o ../../build/zynayumi/Artwork.cpp.o ../../build/zynayumi/Fonts.cpp.o ../../build/zynayumi/DistrhoUIMain_DSSI.cpp.o ../../dpf/build/libdgl-opengl.a -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -fdata-sections -ffunction-sections -Wl,--gc-sections -Wl,-O1 -Wl,--as-needed -Wl,--strip-all  -Wl,--no-undefined -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi -lfmt  -lGL -lX11 -lX11 -lm -llo -lpthread -o ../../bin/zynayumi-dssi/zynayumi_ui
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoPluginMain.cpp (LV2)"
+g++ ../../dpf/distrho/DistrhoPluginMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -DDISTRHO_PLUGIN_TARGET_LV2 -c -o ../../build/zynayumi/DistrhoPluginMain_LV2.cpp.o
+ 
+mkdir -p ../../bin/zynayumi.lv2
+echo "Creating LV2 plugin library for zynayumi"
+g++ ../../build/zynayumi/PluginZynayumi.cpp.o ../../build/zynayumi/DistrhoPluginMain_LV2.cpp.o -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -fdata-sections -ffunction-sections -Wl,--gc-sections -Wl,-O1 -Wl,--as-needed -Wl,--strip-all  -Wl,--no-undefined -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi -lfmt  -shared -o ../../bin/zynayumi.lv2/zynayumi_dsp.so
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoUIMain.cpp (LV2)"
+g++ ../../dpf/distrho/DistrhoUIMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -DDISTRHO_PLUGIN_TARGET_LV2 -c -o ../../build/zynayumi/DistrhoUIMain_LV2.cpp.o
+ 
+mkdir -p ../../bin/zynayumi.lv2
+echo "Creating LV2 plugin UI for zynayumi"
+g++ ../../build/zynayumi/UIZynayumi.cpp.o ../../build/zynayumi/widgets/src/TextButton.cpp.o ../../build/zynayumi/widgets/src/ScrollBar.cpp.o ../../build/zynayumi/widgets/src/Knob.cpp.o ../../build/zynayumi/widgets/src/DropDown.cpp.o ../../build/zynayumi/widgets/src/Menu.cpp.o ../../build/zynayumi/widgets/src/Slider.cpp.o ../../build/zynayumi/widgets/src/HBox.cpp.o ../../build/zynayumi/widgets/src/VBox.cpp.o ../../build/zynayumi/widgets/src/PopUp.cpp.o ../../build/zynayumi/widgets/src/CheckBox.cpp.o ../../build/zynayumi/widgets/src/Panner.cpp.o ../../build/zynayumi/widgets/src/Spinner.cpp.o ../../build/zynayumi/widgets/src/EG.cpp.o ../../build/zynayumi/widgets/src/Waveform.cpp.o ../../build/zynayumi/widgets/src/Switch.cpp.o ../../build/zynayumi/widgets/src/TextSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSlider.cpp.o ../../build/zynayumi/SVGImage.cpp.o ../../build/zynayumi/Artwork.cpp.o ../../build/zynayumi/Fonts.cpp.o ../../build/zynayumi/DistrhoUIMain_LV2.cpp.o ../../dpf/build/libdgl-opengl.a -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -fdata-sections -ffunction-sections -Wl,--gc-sections -Wl,-O1 -Wl,--as-needed -Wl,--strip-all  -Wl,--no-undefined -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi -lfmt  -lGL -lX11 -lX11 -lm -shared -o ../../bin/zynayumi.lv2/zynayumi_ui.so
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoPluginMain.cpp (VST)"
+g++ ../../dpf/distrho/DistrhoPluginMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -DDISTRHO_PLUGIN_TARGET_VST -c -o ../../build/zynayumi/DistrhoPluginMain_VST.cpp.o
+ 
+mkdir -p ../../build/zynayumi
+echo "Compiling DistrhoUIMain.cpp (VST)"
+g++ ../../dpf/distrho/DistrhoUIMain.cpp -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -DDISTRHO_PLUGIN_TARGET_VST -c -o ../../build/zynayumi/DistrhoUIMain_VST.cpp.o
+ 
+mkdir -p ../../bin
+echo "Creating VST plugin for zynayumi"
+g++ ../../build/zynayumi/PluginZynayumi.cpp.o ../../build/zynayumi/UIZynayumi.cpp.o ../../build/zynayumi/widgets/src/TextButton.cpp.o ../../build/zynayumi/widgets/src/ScrollBar.cpp.o ../../build/zynayumi/widgets/src/Knob.cpp.o ../../build/zynayumi/widgets/src/DropDown.cpp.o ../../build/zynayumi/widgets/src/Menu.cpp.o ../../build/zynayumi/widgets/src/Slider.cpp.o ../../build/zynayumi/widgets/src/HBox.cpp.o ../../build/zynayumi/widgets/src/VBox.cpp.o ../../build/zynayumi/widgets/src/PopUp.cpp.o ../../build/zynayumi/widgets/src/CheckBox.cpp.o ../../build/zynayumi/widgets/src/Panner.cpp.o ../../build/zynayumi/widgets/src/Spinner.cpp.o ../../build/zynayumi/widgets/src/EG.cpp.o ../../build/zynayumi/widgets/src/Waveform.cpp.o ../../build/zynayumi/widgets/src/Switch.cpp.o ../../build/zynayumi/widgets/src/TextSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSpinner.cpp.o ../../build/zynayumi/widgets/src/SeqSlider.cpp.o ../../build/zynayumi/SVGImage.cpp.o ../../build/zynayumi/Artwork.cpp.o ../../build/zynayumi/Fonts.cpp.o ../../build/zynayumi/DistrhoPluginMain_VST.cpp.o ../../build/zynayumi/DistrhoUIMain_VST.cpp.o ../../dpf/build/libdgl-opengl.a -Wall -Wextra -pipe -MD -MP -fPIC -DPIC -DNDEBUG -O3 -ffast-math -fdata-sections -ffunction-sections -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -DHAVE_JACK -DHAVE_LIBLO  -DHAVE_CAIRO -DHAVE_OPENGL -DHAVE_CAIRO -DHAVE_OPENGL -DDGL_OPENGL  -I. -I./widgets -I../../nanosvg/src/ -std=gnu++0x -fvisibility-inlines-hidden -I. -I../../dpf/distrho -I../../dpf/dgl -fdata-sections -ffunction-sections -Wl,--gc-sections -Wl,-O1 -Wl,--as-needed -Wl,--strip-all  -Wl,--no-undefined -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi -lfmt  -lGL -lX11 -lX11 -lm -shared -o ../../bin/zynayumi-vst.so
+make[1]: Leaving directory '/home/rob/git/zynayumi/plugins/zynayumi'
+ 
+make -C dpf/utils/lv2-ttl-generator
+ 
+make[1]: Entering directory '/home/rob/git/zynayumi/dpf/utils/lv2-ttl-generator'
+ 
+cc lv2_ttl_generator.c  -o ../lv2_ttl_generator -ldl
+make[1]: Leaving directory '/home/rob/git/zynayumi/dpf/utils/lv2-ttl-generator'
+ 
+/home/rob/git/zynayumi/dpf/utils/generate-ttl.sh
+make: Leaving directory '/home/rob/git/zynayumi'
+ 

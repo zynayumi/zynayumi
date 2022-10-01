@@ -22,24 +22,23 @@ START_NAMESPACE_DISTRHO
 CheckBox::CheckBox(Window &parent) noexcept
     : NanoWidget(parent)
 {
-    background_color = Color(0.8f, 0.8f, 0.8f);
-    foreground_color = Color(0.1f, 0.1f, 0.1f);
-    highlight_color_active = Color(1.0f, 0.5f, 0.5f);
-    highlight_color_inactive = Color(0.0f, 1.0f, 0.0f);
+    active_color = Color(0.8f, 0.8f, 0.8f);
+    highlight_color = Color(1.0f, 0.5f, 0.5f);
+    border_color = Color(1.f, 1.f, 1.f);
     has_mouse_ = false;
     isActive = false;
+    callback = nullptr;
 }
 
 CheckBox::CheckBox(Widget *widget) noexcept
     : NanoWidget(widget)
 {
-    background_color = Color(0.8f, 0.8f, 0.8f);
-    foreground_color = Color(0.1f, 0.1f, 0.1f);
-    highlight_color_active = Color(1.0f, 0.5f, 0.5f);
-    highlight_color_inactive = Color(0.0f, 1.0f, 0.0f);
-
+    active_color = Color(0.8f, 0.8f, 0.8f);
+    highlight_color = Color(1.0f, 0.5f, 0.5f);
+    border_color = Color(1.f, 1.f, 1.f);
     has_mouse_ = false;
     isActive = false;
+    callback = nullptr;
 }
 
 bool CheckBox::onMouse(const MouseEvent &ev)
@@ -47,20 +46,18 @@ bool CheckBox::onMouse(const MouseEvent &ev)
     if (contains(ev.pos) && ev.press && ev.button == 1)
     {
         isActive = !isActive;
-        callback->onCheckBoxClicked(this, isActive);
+        if (callback)
+            callback->onCheckBoxClicked(this, isActive);
+
         repaint();
-        return true; // TODO check if this should be true/false
     }
-    else
-    {
-        return false;
-    }
+    return false;
 }
 bool CheckBox::onMotion(const MotionEvent &ev)
 {
     if (contains(ev.pos) && !has_mouse_)
     {
-        has_mouse_ = true; // TODO check if this should be true/false
+        has_mouse_ = true;
     }
     repaint();
 
@@ -76,59 +73,41 @@ void CheckBox::onNanoDisplay()
 {
     float width = getWidth();
     float height = getHeight();
-
-    // label
-    fontFaceId(main_font_);
-    fontSize(labelSize);
-    Rectangle<float> bounds;
-    textBounds(0.f, 0.f, label, NULL, bounds);
-    const float label_height = bounds.getHeight();
-
-    const float label_x = width * .5f; //- label_width / 2.0f;
-    const float label_y = height - label_height;
-    beginPath();
-    fillColor(text_color);
-    textAlign(ALIGN_CENTER | ALIGN_TOP);
-    text(label_x, label_y, label, NULL);
-    closePath();
-
-    //box
-    if (has_mouse_ && isActive)
+    const float cx = width / 2.f;
+    const float cy = height / 2.f;
+    float radius = cx;
+ 
+    if (has_mouse_)
     {
-        fill_color_ = highlight_color_active;
+        fill_color_ = highlight_color;
     }
-    else if (has_mouse_&&!isActive)
-    {
-        fill_color_ = highlight_color_inactive;
-    }
-    
     else if (isActive)
     {
-        fill_color_ = foreground_color;
+        fill_color_ = active_color;
     }
     else
     {
-        fill_color_ = background_color;
+        fill_color_ = Color(0, 0, 0);
     }
 
-    const float box_x = width / 2.f - boxSize / 2.f;
-    const float box_y = height - label_height - boxSize - margin;
+    // border border
     beginPath();
-    fillColor(fill_color_);
-    roundedRect(box_x + 1.f, box_y + 1.f,
-                boxSize - 2.f, boxSize - 2.f,
-                2.f);
+    fillColor(border_color);
+    circle(cx, cy, radius);
     fill();
     closePath();
-}
-
-void CheckBox::setCallback(Callback *cb)
-{
-    callback = cb;
-}
-void CheckBox::setFont(const char *fontName, const uchar *data, uint dataSize)
-{
-    main_font_ = createFontFromMemory(fontName, data, dataSize, false);
+    // black border
+    beginPath();
+    fillColor(0.0f, 0.0f, 0.0f);
+    circle(cx, cy, radius - 2);
+    fill();
+    closePath();
+    // active circle
+    beginPath();
+    fillColor(fill_color_);
+    circle(cx, cy, radius - 4);
+    fill();
+    closePath();
 }
 
 END_NAMESPACE_DISTRHO

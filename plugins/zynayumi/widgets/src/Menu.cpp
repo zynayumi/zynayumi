@@ -34,6 +34,7 @@ Menu::Menu(Window &parent) noexcept
     has_mouse_ = false;
     dropdown_has_mouse = false;
     menu_font_ = 0;
+    callback_ = nullptr;
 }
 Menu::Menu(Widget *widget) noexcept
     : NanoWidget(widget)
@@ -50,6 +51,7 @@ Menu::Menu(Widget *widget) noexcept
     has_mouse_ = false;
     dropdown_has_mouse = false;
     menu_font_ = 0;
+    callback_ = nullptr;
 }
 
 void Menu::idleCallback()
@@ -74,7 +76,8 @@ bool Menu::onMouse(const MouseEvent &ev)
             if (highlighted_item_ >= 0)
             {
                 const uint index = highlighted_item_ + item_view_first;
-                callback_->onMenuClicked(this, index, items_[index]);
+                if (callback_)
+                    callback_->onMenuClicked(this, index, items_[index]);
                 return true;
             }
             if (ev.pos.getY() < font_size)
@@ -157,19 +160,18 @@ void Menu::onNanoDisplay()
     int height = getHeight();
     auto UI_H = getParentWindow().getHeight(); // PRAY THIS WORKS
 
-    if(getAbsoluteY()+height>static_cast<int>(UI_H))
+    if (getAbsoluteY() + height > static_cast<int>(UI_H))
     {
         setAbsoluteY(UI_H - height - margin);
     }
-    
+
     fontFaceId(menu_font_);
     beginPath();
     fillColor(background_color);
     rect(0, 0, width, height);
     fill();
-    stroke();
     closePath();
-    float y_offset = 0;
+    float y_offset = -2;
     // up/down arrows
     if (max_size_reached_)
     {
@@ -184,7 +186,7 @@ void Menu::onNanoDisplay()
         rect(0, height - font_size, width, font_size);
         fill();
         closePath();
-        // triangles
+        // triangle
         const float center_x = static_cast<float>(width) / 2.0f;
         beginPath();
         fillColor(text_color);
@@ -216,7 +218,7 @@ void Menu::onNanoDisplay()
     }
     int j = 0;
     textAlign(ALIGN_TOP);
-    int max_i = std::min(static_cast<int>(items_.size()), max_view_items);
+    const int max_i = std::min(static_cast<int>(items_.size()), max_view_items);
     for (int i = 0; i < max_i; i++)
     {
         beginPath();
@@ -229,7 +231,7 @@ void Menu::onNanoDisplay()
         {
             fillColor(text_color);
         }
-        text(0, font_size * i + margin + y_offset, items_[j], nullptr);
+        text(1, font_size * i + margin + y_offset, items_[j].c_str(), nullptr);
         closePath();
     }
 }
@@ -239,14 +241,10 @@ void Menu::setCallback(Callback *cb)
     callback_ = cb;
 }
 
-void Menu::addItems(std::initializer_list<const char *> item_list)
+void Menu::addItems(std::initializer_list<const char*> item_list)
 {
+    items_.clear();
     items_.insert(items_.end(), item_list.begin(), item_list.end());
-    /*     for (auto elem : item_list)
-    {
-        items_.push_back(elem);
-        max_size_reached_ = items_.size() > max_view_items ? true : false;
-    } */
     max_size_reached_ = static_cast<int>(items_.size()) > max_view_items ? true : false;
     resize();
 }
@@ -254,12 +252,11 @@ void Menu::addItems(std::initializer_list<const char *> item_list)
 void Menu::setMaxViewItems(int maxViewItems)
 {
     max_view_items = maxViewItems;
-    item_view_last = max_view_items -1;
+    item_view_last = max_view_items - 1;
 }
 
 void Menu::resize()
 {
-
     // measure total size
     float bounds[4]; // xmin,ymin xmax,ymax
     std::stringstream buffer;

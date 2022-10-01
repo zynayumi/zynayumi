@@ -1,0 +1,1413 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.3'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Zynayumi -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Zynayumi</Name>
+   <URI>https://github.com/zynayumi</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Emulation mode</Name>
+    <Symbol>emulationmode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Play mode</Name>
+    <Symbol>playmode</Symbol>
+    <Value>8</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Tone reset</Name>
+    <Symbol>tonereset</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Tone phase</Name>
+    <Symbol>tonephase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Tone time</Name>
+    <Symbol>tonetime</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Tone detune</Name>
+    <Symbol>tonedetune</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Tone transpose</Name>
+    <Symbol>tonetranspose</Symbol>
+    <Value>-14</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Tone spread</Name>
+    <Symbol>tonespread</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Tone legacy tuning</Name>
+    <Symbol>tonelegacytuning</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Noise time</Name>
+    <Symbol>noisetime</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Noise period</Name>
+    <Symbol>noiseperiod</Symbol>
+    <Value>16</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>NoisePeriodEnv attack</Name>
+    <Symbol>noiseperiodenvattack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>NoisePeriodEnv time</Name>
+    <Symbol>noiseperiodenvtime</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Env attack time</Name>
+    <Symbol>envattacktime</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Env hold level 1</Name>
+    <Symbol>envholdlevel1</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Env inter time 1</Name>
+    <Symbol>envintertime1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Env hold level 2</Name>
+    <Symbol>envholdlevel2</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Env inter time 2</Name>
+    <Symbol>envintertime2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Env hold level 3</Name>
+    <Symbol>envholdlevel3</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Env decay time</Name>
+    <Symbol>envdecaytime</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Env sustain level</Name>
+    <Symbol>envsustainlevel</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Env release</Name>
+    <Symbol>envrelease</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>PitchEnv attack pitch</Name>
+    <Symbol>pitchenvattackpitch</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>PitchEnv time</Name>
+    <Symbol>pitchenvtime</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>PitchEnv smoothness</Name>
+    <Symbol>pitchenvsmoothness</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>RingMod waveform level 0</Name>
+    <Symbol>ringmodwaveformlevel0</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>RingMod waveform level 1</Name>
+    <Symbol>ringmodwaveformlevel1</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>RingMod waveform level 2</Name>
+    <Symbol>ringmodwaveformlevel2</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>RingMod waveform level 3</Name>
+    <Symbol>ringmodwaveformlevel3</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>RingMod waveform level 4</Name>
+    <Symbol>ringmodwaveformlevel4</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>RingMod waveform level 5</Name>
+    <Symbol>ringmodwaveformlevel5</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>RingMod waveform level 6</Name>
+    <Symbol>ringmodwaveformlevel6</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>RingMod waveform level 7</Name>
+    <Symbol>ringmodwaveformlevel7</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>RingMod waveform level 8</Name>
+    <Symbol>ringmodwaveformlevel8</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>RingMod waveform level 9</Name>
+    <Symbol>ringmodwaveformlevel9</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>RingMod waveform level 10</Name>
+    <Symbol>ringmodwaveformlevel10</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>RingMod waveform level 11</Name>
+    <Symbol>ringmodwaveformlevel11</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>RingMod waveform level 12</Name>
+    <Symbol>ringmodwaveformlevel12</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>RingMod waveform level 13</Name>
+    <Symbol>ringmodwaveformlevel13</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>RingMod waveform level 14</Name>
+    <Symbol>ringmodwaveformlevel14</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>RingMod waveform level 15</Name>
+    <Symbol>ringmodwaveformlevel15</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>RingMod reset</Name>
+    <Symbol>ringmodreset</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>RingMod sync</Name>
+    <Symbol>ringmodsync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>RingMod phase</Name>
+    <Symbol>ringmodphase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>RingMod loop</Name>
+    <Symbol>ringmodloop</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>RingMod detune</Name>
+    <Symbol>ringmoddetune</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>RingMod transpose</Name>
+    <Symbol>ringmodtranspose</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>RingMod fixed pitch</Name>
+    <Symbol>ringmodfixedpitch</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>RingMod fixed vs relative</Name>
+    <Symbol>ringmodfixedvsrelative</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>RingMod depth</Name>
+    <Symbol>ringmoddepth</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Buzzer enabled</Name>
+    <Symbol>buzzerenabled</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Buzzer shape</Name>
+    <Symbol>buzzershape</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Seq tone pitch 0</Name>
+    <Symbol>seqtonepitch0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>Seq tone pitch 1</Name>
+    <Symbol>seqtonepitch1</Symbol>
+    <Value>-16</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>Seq tone pitch 2</Name>
+    <Symbol>seqtonepitch2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>Seq tone pitch 3</Name>
+    <Symbol>seqtonepitch3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>Seq tone pitch 4</Name>
+    <Symbol>seqtonepitch4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>Seq tone pitch 5</Name>
+    <Symbol>seqtonepitch5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>Seq tone pitch 6</Name>
+    <Symbol>seqtonepitch6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>Seq tone pitch 7</Name>
+    <Symbol>seqtonepitch7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>Seq tone pitch 8</Name>
+    <Symbol>seqtonepitch8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>Seq tone pitch 9</Name>
+    <Symbol>seqtonepitch9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>Seq tone pitch 10</Name>
+    <Symbol>seqtonepitch10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>Seq tone pitch 11</Name>
+    <Symbol>seqtonepitch11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>Seq tone pitch 12</Name>
+    <Symbol>seqtonepitch12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>Seq tone pitch 13</Name>
+    <Symbol>seqtonepitch13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>Seq tone pitch 14</Name>
+    <Symbol>seqtonepitch14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>Seq tone pitch 15</Name>
+    <Symbol>seqtonepitch15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>Seq noise period 0</Name>
+    <Symbol>seqnoiseperiod0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>Seq noise period 1</Name>
+    <Symbol>seqnoiseperiod1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Seq noise period 2</Name>
+    <Symbol>seqnoiseperiod2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>Seq noise period 3</Name>
+    <Symbol>seqnoiseperiod3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>Seq noise period 4</Name>
+    <Symbol>seqnoiseperiod4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>Seq noise period 5</Name>
+    <Symbol>seqnoiseperiod5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>Seq noise period 6</Name>
+    <Symbol>seqnoiseperiod6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>Seq noise period 7</Name>
+    <Symbol>seqnoiseperiod7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>Seq noise period 8</Name>
+    <Symbol>seqnoiseperiod8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>Seq noise period 9</Name>
+    <Symbol>seqnoiseperiod9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Seq noise period 10</Name>
+    <Symbol>seqnoiseperiod10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Seq noise period 11</Name>
+    <Symbol>seqnoiseperiod11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Seq noise period 12</Name>
+    <Symbol>seqnoiseperiod12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>Seq noise period 13</Name>
+    <Symbol>seqnoiseperiod13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>Seq noise period 14</Name>
+    <Symbol>seqnoiseperiod14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>Seq noise period 15</Name>
+    <Symbol>seqnoiseperiod15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>Seq ringmod pitch 0</Name>
+    <Symbol>seqringmodpitch0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>Seq ringmod pitch 1</Name>
+    <Symbol>seqringmodpitch1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>Seq ringmod pitch 2</Name>
+    <Symbol>seqringmodpitch2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>Seq ringmod pitch 3</Name>
+    <Symbol>seqringmodpitch3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>Seq ringmod pitch 4</Name>
+    <Symbol>seqringmodpitch4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>Seq ringmod pitch 5</Name>
+    <Symbol>seqringmodpitch5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>Seq ringmod pitch 6</Name>
+    <Symbol>seqringmodpitch6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>Seq ringmod pitch 7</Name>
+    <Symbol>seqringmodpitch7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>Seq ringmod pitch 8</Name>
+    <Symbol>seqringmodpitch8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>Seq ringmod pitch 9</Name>
+    <Symbol>seqringmodpitch9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>Seq ringmod pitch 10</Name>
+    <Symbol>seqringmodpitch10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>95</Index>
+    <Name>Seq ringmod pitch 11</Name>
+    <Symbol>seqringmodpitch11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>Seq ringmod pitch 12</Name>
+    <Symbol>seqringmodpitch12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>Seq ringmod pitch 13</Name>
+    <Symbol>seqringmodpitch13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>Seq ringmod pitch 14</Name>
+    <Symbol>seqringmodpitch14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>Seq ringmod pitch 15</Name>
+    <Symbol>seqringmodpitch15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>Seq ringmod depth 0</Name>
+    <Symbol>seqringmoddepth0</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>Seq ringmod depth 1</Name>
+    <Symbol>seqringmoddepth1</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>102</Index>
+    <Name>Seq ringmod depth 2</Name>
+    <Symbol>seqringmoddepth2</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>Seq ringmod depth 3</Name>
+    <Symbol>seqringmoddepth3</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>Seq ringmod depth 4</Name>
+    <Symbol>seqringmoddepth4</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>Seq ringmod depth 5</Name>
+    <Symbol>seqringmoddepth5</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>Seq ringmod depth 6</Name>
+    <Symbol>seqringmoddepth6</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>Seq ringmod depth 7</Name>
+    <Symbol>seqringmoddepth7</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>Seq ringmod depth 8</Name>
+    <Symbol>seqringmoddepth8</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>109</Index>
+    <Name>Seq ringmod depth 9</Name>
+    <Symbol>seqringmoddepth9</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>Seq ringmod depth 10</Name>
+    <Symbol>seqringmoddepth10</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>Seq ringmod depth 11</Name>
+    <Symbol>seqringmoddepth11</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>Seq ringmod depth 12</Name>
+    <Symbol>seqringmoddepth12</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>Seq ringmod depth 13</Name>
+    <Symbol>seqringmoddepth13</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>Seq ringmod depth 14</Name>
+    <Symbol>seqringmoddepth14</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>Seq ringmod depth 15</Name>
+    <Symbol>seqringmoddepth15</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>116</Index>
+    <Name>Seq level 0</Name>
+    <Symbol>seqlevel0</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>Seq level 1</Name>
+    <Symbol>seqlevel1</Symbol>
+    <Value>13</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>Seq level 2</Name>
+    <Symbol>seqlevel2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>119</Index>
+    <Name>Seq level 3</Name>
+    <Symbol>seqlevel3</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>120</Index>
+    <Name>Seq level 4</Name>
+    <Symbol>seqlevel4</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>121</Index>
+    <Name>Seq level 5</Name>
+    <Symbol>seqlevel5</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>122</Index>
+    <Name>Seq level 6</Name>
+    <Symbol>seqlevel6</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>123</Index>
+    <Name>Seq level 7</Name>
+    <Symbol>seqlevel7</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>124</Index>
+    <Name>Seq level 8</Name>
+    <Symbol>seqlevel8</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>125</Index>
+    <Name>Seq level 9</Name>
+    <Symbol>seqlevel9</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>126</Index>
+    <Name>Seq level 10</Name>
+    <Symbol>seqlevel10</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>127</Index>
+    <Name>Seq level 11</Name>
+    <Symbol>seqlevel11</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>128</Index>
+    <Name>Seq level 12</Name>
+    <Symbol>seqlevel12</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>129</Index>
+    <Name>Seq level 13</Name>
+    <Symbol>seqlevel13</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>130</Index>
+    <Name>Seq level 14</Name>
+    <Symbol>seqlevel14</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>131</Index>
+    <Name>Seq level 15</Name>
+    <Symbol>seqlevel15</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>132</Index>
+    <Name>Seq tone on 0</Name>
+    <Symbol>seqtoneon0</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>133</Index>
+    <Name>Seq tone on 1</Name>
+    <Symbol>seqtoneon1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>134</Index>
+    <Name>Seq tone on 2</Name>
+    <Symbol>seqtoneon2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>135</Index>
+    <Name>Seq tone on 3</Name>
+    <Symbol>seqtoneon3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>136</Index>
+    <Name>Seq tone on 4</Name>
+    <Symbol>seqtoneon4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>137</Index>
+    <Name>Seq tone on 5</Name>
+    <Symbol>seqtoneon5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>138</Index>
+    <Name>Seq tone on 6</Name>
+    <Symbol>seqtoneon6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>139</Index>
+    <Name>Seq tone on 7</Name>
+    <Symbol>seqtoneon7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>140</Index>
+    <Name>Seq tone on 8</Name>
+    <Symbol>seqtoneon8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>141</Index>
+    <Name>Seq tone on 9</Name>
+    <Symbol>seqtoneon9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>142</Index>
+    <Name>Seq tone on 10</Name>
+    <Symbol>seqtoneon10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>143</Index>
+    <Name>Seq tone on 11</Name>
+    <Symbol>seqtoneon11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>144</Index>
+    <Name>Seq tone on 12</Name>
+    <Symbol>seqtoneon12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>145</Index>
+    <Name>Seq tone on 13</Name>
+    <Symbol>seqtoneon13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>146</Index>
+    <Name>Seq tone on 14</Name>
+    <Symbol>seqtoneon14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>147</Index>
+    <Name>Seq tone on 15</Name>
+    <Symbol>seqtoneon15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>148</Index>
+    <Name>Seq noise on 0</Name>
+    <Symbol>seqnoiseon0</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>149</Index>
+    <Name>Seq noise on 1</Name>
+    <Symbol>seqnoiseon1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>150</Index>
+    <Name>Seq noise on 2</Name>
+    <Symbol>seqnoiseon2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>151</Index>
+    <Name>Seq noise on 3</Name>
+    <Symbol>seqnoiseon3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>152</Index>
+    <Name>Seq noise on 4</Name>
+    <Symbol>seqnoiseon4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>153</Index>
+    <Name>Seq noise on 5</Name>
+    <Symbol>seqnoiseon5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>154</Index>
+    <Name>Seq noise on 6</Name>
+    <Symbol>seqnoiseon6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>155</Index>
+    <Name>Seq noise on 7</Name>
+    <Symbol>seqnoiseon7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>156</Index>
+    <Name>Seq noise on 8</Name>
+    <Symbol>seqnoiseon8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>157</Index>
+    <Name>Seq noise on 9</Name>
+    <Symbol>seqnoiseon9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>158</Index>
+    <Name>Seq noise on 10</Name>
+    <Symbol>seqnoiseon10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>159</Index>
+    <Name>Seq noise on 11</Name>
+    <Symbol>seqnoiseon11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>160</Index>
+    <Name>Seq noise on 12</Name>
+    <Symbol>seqnoiseon12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>161</Index>
+    <Name>Seq noise on 13</Name>
+    <Symbol>seqnoiseon13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>162</Index>
+    <Name>Seq noise on 14</Name>
+    <Symbol>seqnoiseon14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>163</Index>
+    <Name>Seq noise on 15</Name>
+    <Symbol>seqnoiseon15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>164</Index>
+    <Name>Seq tempo</Name>
+    <Symbol>seqtempo</Symbol>
+    <Value>120</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>165</Index>
+    <Name>Seq host sync</Name>
+    <Symbol>seqhostsync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>166</Index>
+    <Name>Seq beat divisor</Name>
+    <Symbol>seqbeatdivisor</Symbol>
+    <Value>24</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>167</Index>
+    <Name>Seq beat multiplier</Name>
+    <Symbol>seqbeatmultiplier</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>168</Index>
+    <Name>Seq loop</Name>
+    <Symbol>seqloop</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>169</Index>
+    <Name>Seq end</Name>
+    <Symbol>seqend</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>170</Index>
+    <Name>LFO shape</Name>
+    <Symbol>lfoshape</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>171</Index>
+    <Name>LFO freq</Name>
+    <Symbol>lfofreq</Symbol>
+    <Value>4.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>172</Index>
+    <Name>LFO delay</Name>
+    <Symbol>lfodelay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>173</Index>
+    <Name>LFO depth</Name>
+    <Symbol>lfodepth</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>174</Index>
+    <Name>Portamento time</Name>
+    <Symbol>portamentotime</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>175</Index>
+    <Name>Portamento smoothness</Name>
+    <Symbol>portamentosmoothness</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>176</Index>
+    <Name>YM channel enabled 0</Name>
+    <Symbol>ymchannelenabled0</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>177</Index>
+    <Name>YM channel enabled 1</Name>
+    <Symbol>ymchannelenabled1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>178</Index>
+    <Name>YM channel enabled 2</Name>
+    <Symbol>ymchannelenabled2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>179</Index>
+    <Name>Pan 1</Name>
+    <Symbol>pan1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>180</Index>
+    <Name>Pan 2</Name>
+    <Symbol>pan2</Symbol>
+    <Value>0.25</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>181</Index>
+    <Name>Pan 3</Name>
+    <Symbol>pan3</Symbol>
+    <Value>0.75</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>182</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>183</Index>
+    <Name>Pitch wheel</Name>
+    <Symbol>pitchwheel</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>184</Index>
+    <Name>Velocity sensitivity</Name>
+    <Symbol>velocitysensitivity</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>185</Index>
+    <Name>Ringmod velocity sensitivity</Name>
+    <Symbol>ringmodvelocitysensitivity</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>186</Index>
+    <Name>Noise period pitch sensitivity</Name>
+    <Symbol>noiseperiodpitchsensitivity</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>187</Index>
+    <Name>Modulation sensitivity</Name>
+    <Symbol>modulationsensitivity</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>188</Index>
+    <Name>MIDI channel 0</Name>
+    <Symbol>midichannel0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>189</Index>
+    <Name>MIDI channel 1</Name>
+    <Symbol>midichannel1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>190</Index>
+    <Name>MIDI channel 2</Name>
+    <Symbol>midichannel2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>191</Index>
+    <Name>Oversampling</Name>
+    <Symbol>oversampling</Symbol>
+    <Value>2</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>pulse_in:front-left</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_2</Source>
+   <Target>pulse_in:front-right</Target>
+  </Connection>
+  <Connection>
+   <Source>pulse_out:front-left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>pulse_out:front-right</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Zynayumi:Audio Output 1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Zynayumi:Audio Output 2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1550" y1="1274" x2="2053" y2="1574">
+    <Name>system</Name>
+   </Position>
+   <Position x1="1772" y1="1285">
+    <Name>pulse_in</Name>
+   </Position>
+   <Position x1="1830" y1="1398" pluginId="0">
+    <Name>Zynayumi</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

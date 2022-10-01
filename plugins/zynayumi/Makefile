@@ -27,6 +27,17 @@ FILES_UI = \
 	widgets/src/VBox.cpp \
 	widgets/src/PopUp.cpp \
 	widgets/src/CheckBox.cpp \
+	widgets/src/Panner.cpp \
+	widgets/src/Spinner.cpp \
+	widgets/src/EG.cpp \
+	widgets/src/Waveform.cpp \
+	widgets/src/Switch.cpp \
+	widgets/src/TextSpinner.cpp \
+	widgets/src/SeqSpinner.cpp \
+	widgets/src/SeqSlider.cpp \
+	SVGImage.cpp \
+	Artwork.cpp \
+	Fonts.cpp
 	
 # --------------------------------------------------------------
 # Do some magic
@@ -36,8 +47,9 @@ include ../../dpf/Makefile.plugins.mk
 # --------------------------------------------------------------
 # Extra flags
 
-LINK_FLAGS += -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi
-BASE_FLAGS += -I. -I./widgets 
+LINK_FLAGS += -lpthread -L../../libzynayumi/build/src/zynayumi -lzynayumi \
+	$(shell $(PKG_CONFIG) --libs fmt) 
+BASE_FLAGS += -I. -I./widgets -I../../nanosvg/src/
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

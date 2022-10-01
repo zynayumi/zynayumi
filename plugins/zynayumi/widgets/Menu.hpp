@@ -69,7 +69,7 @@ private:
   void resize();
   void scrollMenu(int dir);
 
-  std::vector<const char *> items_;
+  std::vector<std::string> items_;
 
   Callback *callback_;
   int highlighted_item_;

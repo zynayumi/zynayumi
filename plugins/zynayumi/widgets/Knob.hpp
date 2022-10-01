@@ -47,11 +47,10 @@ public:
     void setPopUp(PopUp *popUp);
     void idleCallback() override;
     void setStepText(std::initializer_list<const char *> strings);
-    void setFont(const char *name, const uchar *data, uint dataSize);
+    //void setFont(const char *name, const uchar *data, uint dataSize); 
+   // void setFont(const char *name);
 
-    std::string label; // public, no getter or setter
     std::string unit;  // Hz, dB, Ct
-    float labelSize;
     float gauge_width;
     Color background_color;
     Color foreground_color;
@@ -68,6 +67,7 @@ public:
     bool using_log;
     bool is_centered;
     bool setParamOnMove;
+   // FontId font_id;
 
 protected:
     void onNanoDisplay() override;
@@ -83,7 +83,7 @@ private:
     float value_;
     float value_tmp_;
     int mouseY_;
-    FontId font_;
+    
     Color fill_color_;
     bool has_mouse_;
 
