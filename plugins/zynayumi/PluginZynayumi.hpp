@@ -25,8 +25,6 @@
 #include "../../libzynayumi/src/zynayumi/parameters.hpp"
 #include "../../libzynayumi/src/zynayumi/programs.hpp"
 
-using std::uint32_t;
-
 START_NAMESPACE_DISTRHO
 
 class PluginZynayumi : public Plugin
