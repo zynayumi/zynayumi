@@ -80,6 +80,24 @@ If you make a song with Zynayumi let me know so I can include it.
 4. Copy the plugins and executable in the ``bin`` folder to the
    desired destination.
 
+## Docker
+
+Docker is a convenient way to test compilation on various platforms.
+A docker file for Arch Linux is present under the root folder of that
+repository.  You can do the following with it:
+
+1. Build the image
+
+```bash
+docker build -t zynayumi .
+```
+
+2. Enter the container
+
+```bash
+docker run -it zynayumi
+```
+
 ## Specification
 
 For the detail specification of all available parameters, see
